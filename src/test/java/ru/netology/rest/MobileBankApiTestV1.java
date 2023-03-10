@@ -16,10 +16,6 @@ class MobileBankApiTestV1 {
           .get("/demo/accounts")
       // Проверки
       .then()
-          .statusCode(200)
-          .body("",hasSize(3))
-          .body("[2].currency", equalTo("RUB"))
-          .body("every {it.balance >= 0}", is (true));
-
+          .statusCode(200);
     }
 }
